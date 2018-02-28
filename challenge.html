@@ -10,25 +10,26 @@
   <p id="target"></p>
   
   <script>
-    const p1 = prompt('Player 1! Rock, paper or scissors?');
-    const p2 = prompt('Playa 2! Rock, paper or scissors?');
+    const p1 = prompt('Player 1! Rock, paper or scissors?').toLowerCase();
+    const p2 = prompt('Playa 2! Rock, paper or scissors?').toLowerCase();
+    const target = document.querySelector('#target');
 
-    if(p1.toLowerCase() === 'rock' && p2.toLowerCase() === 'paper'){
-      document.querySelector('#target').innerHTML = 'P2 wins!'
-    } else if (p1.toLowerCase() === 'rock' && p2.toLowerCase() === 'scissors'){
-      document.querySelector('#target').innerHTML = 'P1` wins!'
-    } else if(p1.toLowerCase() === 'scissors' && p2.toLowerCase() === 'rock'){
-      document.querySelector('#target').innerHTML = 'P2 wins!'
-    } else if(p1.toLowerCase() === 'scissors' && p2.toLowerCase() === 'paper'){
-      document.querySelector('#target').innerHTML = 'P1 wins!'
-    } else if (p1.toLowerCase() === 'paper' && p2.toLowerCase() === 'rock'){
-      document.querySelector('#target').innerHTML = 'P1 wins'
-    } else if(p1.toLowerCase() === 'paper' && p2.toLowerCase() === 'scissors'){
-      document.querySelector('#target').innerHTML = 'P2 wins'
-    } else  if(p1.toLowerCase() === p2.toLowerCase()){
-      document.querySelector('#target').innerHTML = 'Draw!!'
+    if(p1 === 'rock' && p2 === 'paper'){
+      target.innerHTML = 'P2 wins!'
+    } else if (p1 === 'rock' && p2 === 'scissors'){
+      target.innerHTML = 'P1 wins!'
+    } else if(p1 === 'scissors' && p2 === 'rock'){
+      target.innerHTML = 'P2 wins!'
+    } else if(p1 === 'scissors' && p2 === 'paper'){
+      target.innerHTML = 'P1 wins!'
+    } else if (p1 === 'paper' && p2 === 'rock'){
+      target.innerHTML = 'P1 wins'
+    } else if(p1 === 'paper' && p2 === 'scissors'){
+      target.innerHTML = 'P2 wins'
+    } else  if(p1 === p2){
+      target.innerHTML = 'Draw!!'
     } else {
-      document.querySelector('#target').innerHTML = 'Someone really botched this!'
+      target.innerHTML = 'Someone really botched this!'
     }
 
     
