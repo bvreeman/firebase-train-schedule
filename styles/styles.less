@@ -1,0 +1,42 @@
+// can use variables that allow us to make changes across a high range of 
+// instances by changing the variable.
+
+@color1: #123455;
+@font: helvetica;
+
+.some-class {
+    color: @color1;
+    font-family: @font;
+    margin: 10px 5px;
+    border-radius: 5px;
+}
+
+//shows how we can nest a class inside of another class to use all of its specific items.
+.bigger-class {
+    .some-class;
+    //this shows how it will change the top margin because it comes after the .some-class css
+    margin-top: 5px;
+}
+
+
+p.p-tag will overwrite the others because it has a higher specificity than the others
+
+p.p-tag {
+    color: magenta;
+}
+
+/* this will win over a regual p tag because it's more specific that just the p */
+.p-tag {
+    font-size: 48px;
+    font-weight: bold;
+    color: green ;
+    /* if used color: green !important, it would use this color because it makes it the top, 
+    but it shouldn't be used because of future issues with style changes in larger code. */
+}
+
+/* not specific, will only win out if there are other p 's without anything more specific, 
+and it's the last one on the list */
+p {
+    color: tomato;
+
+}

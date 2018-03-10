@@ -1,0 +1,29 @@
+.some-class {
+  color: #123455;
+  font-family: helvetica;
+  margin: 10px 5px;
+  border-radius: 5px;
+}
+.bigger-class {
+  color: #123455;
+  font-family: helvetica;
+  margin: 10px 5px;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+p.p-tag will overwrite the others because it has a higher specificity than the others p.p-tag {
+  color: magenta;
+}
+/* this will win over a regual p tag because it's more specific that just the p */
+.p-tag {
+  font-size: 48px;
+  font-weight: bold;
+  color: green ;
+  /* if used color: green !important, it would use this color because it makes it the top, 
+    but it shouldn't be used because of future issues with style changes in larger code. */
+}
+/* not specific, will only win out if there are other p 's without anything more specific, 
+and it's the last one on the list */
+p {
+  color: tomato;
+}
