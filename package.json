@@ -1,5 +1,5 @@
 {
-  "name": "javascriptexercises",
+  "name": "firebase",
   "version": "1.0.0",
   "description": "Basic skeleton and toolchain for projects.",
   "main": "index.js",
@@ -10,8 +10,8 @@
     "type": "git",
     "url": "git+https://github.com/joshboyan/javaScriptExercises.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Brandon Vreeman",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/joshboyan/javaScriptExercises/issues"
   },
@@ -25,5 +25,8 @@
     "gulp-autoprefixer": "^5.0.0",
     "gulp-html-beautify": "^1.0.1",
     "gulp-less": "^4.0.0"
+  },
+  "directories": {
+    "example": "examples"
   }
 }
