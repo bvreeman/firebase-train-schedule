@@ -1,29 +1,20 @@
-.some-class {
-  color: tomato;
-  font-family: helvetica;
-  margin: 10px 5px;
-  border-radius: 5px;
+.jumbotron {
+  background-color: #7F462C;
+  color: white;
+  margin-top: 20px;
 }
-.bigger-class {
-  color: tomato;
-  font-family: helvetica;
-  margin: 10px 5px;
-  border-radius: 5px;
-  margin-top: 5px;
-}
-p.p-tag will overwrite the others because it has a higher specificity than the others p.p-tag {
-  color: magenta;
-}
-/* this will win over a regual p tag because it's more specific that just the p */
-.p-tag {
-  font-size: 48px;
+.panel-heading {
+  width: 100%;
+  background-color: #337AB7;
+  color: white;
+  margin-top: 20px;
   font-weight: bold;
-  color: green ;
-  /* if used color: green !important, it would use this color because it makes it the top, 
-    but it shouldn't be used because of future issues with style changes in larger code. */
+  clear: both;
+  padding-top: 5px;
+  padding-left: 5px;
+  font-size: 18px;
 }
-/* not specific, will only win out if there are other p 's without anything more specific, 
-and it's the last one on the list */
-p {
-  color: tomato;
+.panel.no-gutters {
+  margin-left: 0px;
+  margin-right: 0px;
 }

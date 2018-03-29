@@ -28,5 +28,6 @@
   },
   "directories": {
     "example": "examples"
-  }
+  },
+  "dependencies": {}
 }
