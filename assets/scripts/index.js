@@ -63,8 +63,20 @@ $(document).ready(function () {
     const frequency = childSnapshot.val().frequency;
     const firstTrainTime = childSnapshot.val().firstTrainTime;
 
-    $('#train-table > tbody').append(`<tr><td>${trainName}</td><td>${destination}</td><td>${
-      frequency}</td><td>${nextArrival}</td><td>${minutesAway}</td></tr>`);
+    // Math to set up the Next Arrival and Minutes Away
+    const firstTimeConverted = moment(firstTrainTime, 'hh:mm').subtract(1, 'years');
+    console.log(firstTimeConverted);
+    const timeDifference = moment().diff(moment(firstTimeConverted), 'minutes');
+    console.log(timeDifference);
+    const remainingTime = timeDifference % frequency;
+    console.log(remainingTime);
+    const minutesUntilTrain = frequency - remainingTime;
+    console.log(minutesUntilTrain);
+    const nextTrain = moment().add(minutesUntilTrain, 'minutes').format('hh:mm A');
+    console.log(moment(nextTrain).format('hh:mm'));
+
+    $('#train-table > tbody').append(`<tr><td>${trainName}</td><td>${destination}</td><td>
+    ${frequency}</td><td>${nextTrain}</td><td>${minutesUntilTrain}</td></tr>`);
   });
 
   // Clock function to give me the time right now
@@ -94,6 +106,3 @@ $(document).ready(function () {
 // console.log( moment.duration(lunch - breakfast).humanize() + ' between meals' ) // 4 hours between meals
 
 // Creates the firstTrainTime
-
-const timeDifference = moment().diff(moment.firstTrainTime, 'minutes');
-console.log(timeDifference);
