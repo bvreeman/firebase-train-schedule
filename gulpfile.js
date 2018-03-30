@@ -10,6 +10,7 @@ const bs = require('browser-sync').create(); // create a browser sync instance.
 // paths
 const htmlSources = './*.html';
 const cssSources = './assets/styles/*.less';
+const javaScriptSources = './assets/scripts/*.js';
 
 gulp.task('browser-sync', function() {
   bs.init({
@@ -38,6 +39,7 @@ gulp.task('htmlbeautify', function() {
 gulp.task('watch', function() {
   gulp.watch(cssSources, ['less']).on('change', bs.reload);
   gulp.watch(htmlSources, ['htmlbeautify']).on('change', bs.reload);
+  gulp.watch(javaScriptSources).on('change', bs.reload);
 });
 
 gulp.task('default', ['browser-sync', 'watch']);

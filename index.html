@@ -12,6 +12,8 @@
     <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
     <!-- Link to css stylesheet -->
     <link rel="stylesheet" href="./assets/styles/styles.css">
+    <!-- Link to Moment.js should go here -->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
 
 </head>
 
@@ -27,13 +29,21 @@
         </div>
     </div>
     <div class="container">
+        <div class="row time">
+            <div class="col-md-12">
+                <div id="txt" font-size=24px></div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="container">
         <!-- Train Schedule-->
         <div class="panel panel-primary">
             <div class="panel-heading">
                 <h3 class="panel-title"><strong>Current Train Schedule</strong></h3>
             </div>
             <div class="panel-body">
-                <table class="table table-hover" id='employee-table'>
+                <table class="table table-hover" id='train-table'>
                     <thead>
                         <tr>
                             <th>Train Name</th>
@@ -50,7 +60,7 @@
         </div>
     </div>
     <div class="container">
-        <!-- Add Employee  -->
+        <!-- Add Train  -->
         <div class="panel panel-primary">
             <div class="panel-heading">
                 <h3 class="panel-title"><strong>Add Train</strong></h3>

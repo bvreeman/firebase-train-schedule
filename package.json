@@ -29,5 +29,7 @@
   "directories": {
     "example": "examples"
   },
-  "dependencies": {}
+  "dependencies": {
+    "moment": "^2.21.0"
+  }
 }
