@@ -30,6 +30,7 @@
     "example": "examples"
   },
   "dependencies": {
+    "dotenv": "^6.0.0",
     "moment": "^2.21.0"
   }
 }

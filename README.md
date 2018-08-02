@@ -1,9 +1,3 @@
-# How to use this repo
+# View the app in action on the following link
 
-1. npm i
-
-2. install gulp globally npm i -g gulp
-
-3. run gulp
-
-4 git remote set-url origin 'insert repository name here without apostraphe'
+https://bvreeman.github.io/firebase-train-schedule/
