@@ -4,12 +4,12 @@
 
 // Initialize Firebase
 const config = {
-  apiKey: process.env.APIKEY,
-  authDomain: process.env.AUTH_DOMAIN,
-  databaseURL: process.env.URL,
-  project_Id: process.env.PROJECT_ID,
-  storageBucket: process.env.STORAGE_BUCKET,
-  messagingSenderId: process.env.MESSAGING_SENDER_ID,
+  apiKey: 'AIzaSyA7hC15i_G_STqoG0lnk1MPiyBuGgULyEE',
+  authDomain: 'train-schedule-b438c.firebaseapp.com',
+  databaseURL: 'https://train-schedule-b438c.firebaseio.com',
+  projectId: 'train-schedule-b438c',
+  storageBucket: 'train-schedule-b438c.appspot.com',
+  messagingSenderId: '120902791784',
 };
 firebase.initializeApp(config);
 
